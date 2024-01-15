@@ -2,7 +2,8 @@
 
 import { useWebsiteConfig } from "../lib/state"
 import { generateWebsite } from "../lib/api"
-import HomePageDecorations from "@/components/HomePageDecorations"
+import { AnimatePresence, motion } from "framer-motion"
+import HomePageDecorations from "../components/HomePageDecorations"
 
 export default function Home() {
   const {
@@ -100,13 +101,28 @@ export default function Home() {
           </div>
         </div>
 
-        <input
-          name="prompt"
-          type="text"
-          placeholder="Enter your API Key here"
-          className="border-2 border-gray-300 rounded-md px-4 py-2"
-          onChange={(e) => setApiKey(e.target.value)}
-        />
+        <div className="h-12">
+          <AnimatePresence>
+            {prompt.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                animate={{ opacity: 1, y: 0 }}
+                layout
+                exit={{ opacity: 0, y: 24 }}
+                className="w-full"
+                transition={{ type: "spring", stiffness: 260, damping: 20 }}
+              >
+                <input
+                  name="prompt"
+                  type="text"
+                  placeholder="Enter your API Key here"
+                  className="border-2 border-gray-300 rounded-md px-4 py-2 w-full"
+                  onChange={(e) => setApiKey(e.target.value)}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
 
         <button
           type="submit"
