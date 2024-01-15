@@ -1,4 +1,7 @@
-# Website GPT 🔨🤖
+<a href="/">
+  <img src="https://i.imgur.com/uVJ89Tj.png">
+  <h1 align="center">Website GPT</h1>
+</a>
 
 A really simple interface that uses ChatGPT 4 + OpenAI function calling to generate HTML, (inline-) CSS and JS based on a user prompt. Using a simple API and a NextJS 14 frontend it's hosted for free.
 
