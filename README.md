@@ -1,6 +1,4 @@
-# Website GPT 🔨🤖
-
-A really simple interface that uses ChatGPT 4 + OpenAI function calling to generate HTML, (inline-) CSS and JS based on a user prompt. Using a simple API and a NextJS 14 frontend it's hosted for free.
+<h6 align="center">A simple and OSS tool to generate and host a HTML & CSS website from a prompt.</h6>
 
 ## How this works
 

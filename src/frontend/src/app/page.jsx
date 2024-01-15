@@ -8,15 +8,31 @@ export default function Home() {
   const {
     prompt,
     setPrompt,
-    api_key,
-    setAPIKey,
     generate_js,
     setGenerateJS,
     generate_css,
     setGenerateCSS,
     generate_inlinecss,
     setGenerateInlineCSS,
+    api_key,
+    setApiKey,
   } = useWebsiteConfig()
+
+  async function generate(e) {
+    const prompt = e.get("prompt")
+    const generate_js = e.get("generate_js")
+    const generate_css = e.get("generate_css")
+    const generate_inlinecss = e.get("generate_inlinecss")
+    const api_key = e.get("api_key")
+
+    console.log({
+      prompt,
+      generate_js,
+      generate_css,
+      generate_inlinecss,
+      api_key,
+    })
+  }
 
   return (
     <main className="flex min-h-screen flex-col items-center space-y-4 p-4 py-24 sm:p-24">
@@ -89,7 +105,7 @@ export default function Home() {
           type="text"
           placeholder="Enter your API Key here"
           className="border-2 border-gray-300 rounded-md px-4 py-2"
-          onChange={(e) => setAPIKey(e.target.value)}
+          onChange={(e) => setApiKey(e.target.value)}
         />
 
         <button
@@ -101,9 +117,9 @@ export default function Home() {
       </form>
 
       <div className="flex flex-col items-center mt-20">
-        <pre>
+        <code>
           {JSON.stringify({ prompt, generate_js, generate_css, generate_inlinecss, api_key }, null, 2)}
-        </pre>
+        </code>
       </div>
     </main>
   )
