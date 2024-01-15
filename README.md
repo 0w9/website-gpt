@@ -21,7 +21,7 @@ Currently the app only supports a HTML site and a CSS stylesheet. Later it will 
 
 - [X] Basic API
 - [X] Support for HTML
-- [-] Generating CSS (in progress)
+- [ ] Generating CSS (in progress)
 - [ ] Using JS
 - [ ] Allowing usage of external packages
 
