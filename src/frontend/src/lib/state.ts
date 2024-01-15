@@ -5,6 +5,7 @@ type WebsiteConfig = {
     generate_js: boolean;
     generate_css: boolean;
     generate_inlinecss: boolean;
+    api_key: string;
 }
 
 export const useWebsiteConfig = create<WebsiteConfig>((set) => ({
@@ -12,6 +13,7 @@ export const useWebsiteConfig = create<WebsiteConfig>((set) => ({
     generate_js: true,
     generate_css: true,
     generate_inlinecss: false,
+    api_key: "",
 
     setPrompt: (prompt: string) => set({ prompt }),
     setGenerateJS: (generate_js: boolean) => set({ generate_js }),
@@ -31,4 +33,5 @@ export const useWebsiteConfig = create<WebsiteConfig>((set) => ({
             set({ generate_inlinecss });
         }
     },
+    setApiKey: (api_key: string) => set({ api_key }),
 }));
