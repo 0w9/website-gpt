@@ -1,5 +1,5 @@
 <a href="/">
-  <img src="https://i.imgur.com/uVJ89Tj.png">
+  <img src="https://ibb.co/wBXtqNF">
   <h1 align="center">Website GPT</h1>
 </a>
 
